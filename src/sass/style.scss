@@ -5,3 +5,28 @@
     margin: 0;
     list-style-type: none;
 }
+
+.container{
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 20% 80%;
+    grid-template-rows: 15% 85%;
+}
+
+.header{
+    grid-column: 1/3;
+    grid-row: 1/2;
+    border: 1px solid black;
+}
+
+.navbar{
+    grid-column: 1/2;
+    grid-row: 2/3;
+    border: 1px solid black
+}
+
+.main-content{
+    grid-column: 2/3;
+    grid-row: 2/3;
+    border: 1px solid black
+}
