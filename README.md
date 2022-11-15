@@ -1,15 +1,4 @@
-# 🚀 Welcome to your new awesome project!
+# TODO List for ~The Odin Project~
 
-This project has been created using **webpack-cli**, you can now run
-
-```
-npm run build
-```
-
-or
-
-```
-yarn build
-```
-
-to bundle your application
+Its a typical todo-list which allows users to create a project and append tasks upon it
+with according information about its completion.
