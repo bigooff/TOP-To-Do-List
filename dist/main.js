@@ -36,7 +36,37 @@ eval("\n\nmodule.exports = function (i) {\n  return i[1];\n};\n\n//# sourceURL=w
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _sass_style_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./sass/style.scss */ \"./src/sass/style.scss\");\n/* harmony import */ var _sass_todo_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./sass/todo.scss */ \"./src/sass/todo.scss\");\n\n\n\n//# sourceURL=webpack://my-webpack-project/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _sass_style_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./sass/style.scss */ \"./src/sass/style.scss\");\n/* harmony import */ var _sass_todo_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./sass/todo.scss */ \"./src/sass/todo.scss\");\n/* harmony import */ var _modules_Controller__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/Controller */ \"./src/modules/Controller.js\");\n\n\n\n_modules_Controller__WEBPACK_IMPORTED_MODULE_2__.createNewProject();\n\n//# sourceURL=webpack://my-webpack-project/./src/index.js?");
+
+/***/ }),
+
+/***/ "./src/modules/Controller.js":
+/*!***********************************!*\
+  !*** ./src/modules/Controller.js ***!
+  \***********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"createNewProject\": () => (/* binding */ createNewProject)\n/* harmony export */ });\n/* harmony import */ var _Projects__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Projects */ \"./src/modules/Projects.js\");\n/* harmony import */ var _DOMUtils__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./DOMUtils */ \"./src/modules/DOMUtils.js\");\n\n\nvar currentProjects = [];\nvar newProject = new _Projects__WEBPACK_IMPORTED_MODULE_0__[\"default\"](\"test\", 1, 2, 3, 4, 5, 6, 7);\nvar newProjBtn = document.querySelector(\".new\");\nnewProjBtn.addEventListener(\"click\", function () {\n  openOverlay();\n});\nfunction createNewProject(project) {\n  console.log(\"overlay to type inputs\");\n  console.log(project);\n}\n\n//# sourceURL=webpack://my-webpack-project/./src/modules/Controller.js?");
+
+/***/ }),
+
+/***/ "./src/modules/DOMUtils.js":
+/*!*********************************!*\
+  !*** ./src/modules/DOMUtils.js ***!
+  \*********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"openOverlay\": () => (/* binding */ openOverlay),\n/* harmony export */   \"showProject\": () => (/* binding */ showProject)\n/* harmony export */ });\nvar newProjectBtn = document.querySelector(\".new\");\nvar navbar = document.querySelector(\".navbar\");\nvar projects = document.querySelectorAll(\".project\");\nvar mainContent = document.querySelector(\".main-content\");\nfunction showProject() {\n  var project = document.querySelector(\".project\");\n}\nfunction openOverlay() {}\n\n//# sourceURL=webpack://my-webpack-project/./src/modules/DOMUtils.js?");
+
+/***/ }),
+
+/***/ "./src/modules/Projects.js":
+/*!*********************************!*\
+  !*** ./src/modules/Projects.js ***!
+  \*********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nfunction _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (\"value\" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }\n\nfunction _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, \"prototype\", { writable: false }); return Constructor; }\n\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nvar Project = /*#__PURE__*/_createClass(function Project(name) {\n  _classCallCheck(this, Project);\n\n  this.name = name;\n\n  for (var _len = arguments.length, tasks = new Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {\n    tasks[_key - 1] = arguments[_key];\n  }\n\n  this.tasks = tasks;\n});\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Project);\n\n//# sourceURL=webpack://my-webpack-project/./src/modules/Projects.js?");
 
 /***/ }),
 
