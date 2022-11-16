@@ -2,9 +2,12 @@
 @use "./colors" as *;
 @use "./reset";
 @use "./navbar";
+@use "./form.scss";
 //////////////////////////////////
 
-
+*{
+    color: $darkGray;
+}
 
 .container{
     min-height: 100vh;
@@ -68,5 +71,8 @@
 .main-content{
     grid-column: 2/3;
     grid-row: 2/3;
-    
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 4fr;
+    align-items: center;
 }
